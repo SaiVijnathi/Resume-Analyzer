@@ -20,7 +20,8 @@ export default function Home() {
       body : formData
     }
 
-    const result = await fetch("http://127.0.0.1:8000/upload_resume", reqOptions);
+    // const result = await fetch("http://127.0.0.1:8000/upload_resume", reqOptions);
+    const result = await fetch("https://resume-analyzer-k6ee.onrender.com/upload_resume", reqOptions);
     const data = await result.json();
     setResData(data)
     console.log(data)
@@ -37,7 +38,8 @@ export default function Home() {
       body : formData
     }
 
-    const result = await fetch("http://127.0.0.1:8000/summarize", reqOptions);
+    // const result = await fetch("http://127.0.0.1:8000/summarize", reqOptions);
+    const result = await fetch("https://resume-analyzer-k6ee.onrender.com/summarize", reqOptions);
     const data = await result.json();
 
     console.log("summary",data)
